@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GithubApp</string>
+    <string name="contributors">Contributors:</string>
+    <string name="stargazers">Stargazers:</string>
+    <string name="forks">Forks:</string>
+    <string name="size">Size:</string>
+    <string name="avatar">Avatar</string>
+    <string name="prev">Prev</string>
+    <string name="next">Next</string>
+</resources>

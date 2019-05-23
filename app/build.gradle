@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "cz.sedlacek.githubapp"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "0.1"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:$AppCompatVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$ConstraintVersion"
+    implementation "com.google.android.material:material:$MaterialVersion"
+
+    kapt "com.android.databinding:compiler:$DataBindingVersion"
+
+    implementation "org.jetbrains.anko:anko-commons:$anko_version"
+
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+}
